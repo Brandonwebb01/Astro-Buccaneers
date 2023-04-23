@@ -6,10 +6,10 @@ public class CameraMovement : MonoBehaviour
 {
     public float speed = 5.0f;
 
-    public float cameraMinX = -10f;
-    public float cameraMaxX = 5f;
-    public float cameraMinY = -10f;
-    public float cameraMaxY = 3f;
+    public float cameraMinX = 0.1f;
+    public float cameraMaxX = 15.5f;
+    public float cameraMinY = 0.1f;
+    public float cameraMaxY = 10.6f;
 
     // Start is called before the first frame update
     void Start()
