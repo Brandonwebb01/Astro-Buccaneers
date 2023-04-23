@@ -135,8 +135,9 @@ GameObject:
   - component: {fileID: 522413392}
   - component: {fileID: 522413391}
   - component: {fileID: 522413390}
+  - component: {fileID: 522413393}
   m_Layer: 0
-  m_Name: SolarSystem (2)
+  m_Name: Sarcin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -239,6 +240,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &522413393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522413388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7536bd809e697a146ad0c9432be7af8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Sarcin
 --- !u!1 &1124585168
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,8 +367,9 @@ GameObject:
   - component: {fileID: 1532801169}
   - component: {fileID: 1532801168}
   - component: {fileID: 1532801167}
+  - component: {fileID: 1532801170}
   m_Layer: 0
-  m_Name: SolarSystem (1)
+  m_Name: Andromita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -457,6 +472,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1532801170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532801165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7536bd809e697a146ad0c9432be7af8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Andromita
 --- !u!1 &1608770389
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,8 +532,9 @@ GameObject:
   - component: {fileID: 1766729568}
   - component: {fileID: 1766729570}
   - component: {fileID: 1766729571}
+  - component: {fileID: 1766729572}
   m_Layer: 0
-  m_Name: SolarSystem
+  m_Name: Sol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -608,6 +637,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialColor: {r: 1, g: 0, b: 0, a: 0.5}
   hoverColor: {r: 1, g: 1, b: 1, a: 0.5}
+--- !u!114 &1766729572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766729566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7536bd809e697a146ad0c9432be7af8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Sol
 --- !u!1 &1814122373
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,8 +662,9 @@ GameObject:
   - component: {fileID: 1814122377}
   - component: {fileID: 1814122376}
   - component: {fileID: 1814122375}
+  - component: {fileID: 1814122378}
   m_Layer: 0
-  m_Name: SolarSystem (3)
+  m_Name: Marlee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -724,6 +767,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1814122378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814122373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7536bd809e697a146ad0c9432be7af8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Marlee
 --- !u!1001 &6522065391660404022
 PrefabInstance:
   m_ObjectHideFlags: 0
