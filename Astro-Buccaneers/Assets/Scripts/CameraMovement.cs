@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
+    public Transform playerTransform;
     public float speed = 5.0f;
 
     public float cameraMinX = 0.1f;
@@ -11,42 +12,23 @@ public class CameraMovement : MonoBehaviour
     public float cameraMinY = 0.1f;
     public float cameraMaxY = 10.6f;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-            // Get the camera's current position
         Vector3 cameraPosition = transform.position;
-        
-        // Restrict the camera's X position within the specified range
         cameraPosition.x = Mathf.Clamp(cameraPosition.x, cameraMinX, cameraMaxX);
-        
-        // Restrict the camera's Y position within the specified range
         cameraPosition.y = Mathf.Clamp(cameraPosition.y, cameraMinY, cameraMaxY);
-        
-        // Set the camera's new position
         transform.position = cameraPosition;
+    }
 
-         if(Input.GetKey(KeyCode.RightArrow))
-     {
-         transform.Translate(new Vector3(speed * Time.deltaTime,0,0));
-     }
-     if(Input.GetKey(KeyCode.LeftArrow))
-     {
-         transform.Translate(new Vector3(-speed * Time.deltaTime,0,0));
-     }
-     if(Input.GetKey(KeyCode.DownArrow))
-     {
-         transform.Translate(new Vector3(0,-speed * Time.deltaTime,0));
-     }
-     if(Input.GetKey(KeyCode.UpArrow))
-     {
-         transform.Translate(new Vector3(0,speed * Time.deltaTime,0));
-     }
+    void LateUpdate()
+    {
+        Vector3 desiredPosition = new Vector3(playerTransform.position.x, playerTransform.position.y, transform.position.z);
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, speed * Time.deltaTime);
+        transform.position = smoothedPosition;
     }
 }
