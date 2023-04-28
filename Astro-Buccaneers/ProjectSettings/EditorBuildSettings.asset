@@ -12,6 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Navigation.unity
     guid: 74277e63893c7c646bb2b9b777404da9
   - enabled: 1
-    path: Assets/Scenes/Sol.unity
+    path: Assets/Scenes/SolarSystems/Sol.unity
     guid: 0828402d1aff0a74097ef03c34f73432
+  - enabled: 1
+    path: Assets/Scenes/SolarSystems/Andromita.unity
+    guid: debe9580d7216694d97ea022e518c352
+  - enabled: 1
+    path: Assets/Scenes/SolarSystems/Marlee.unity
+    guid: bf01a3cb59b3f9e4cb2993d4145aecda
+  - enabled: 1
+    path: Assets/Scenes/SolarSystems/Sarcin.unity
+    guid: 21e01d2f933541e4fa6f6da514db7c83
   m_configObjects: {}
