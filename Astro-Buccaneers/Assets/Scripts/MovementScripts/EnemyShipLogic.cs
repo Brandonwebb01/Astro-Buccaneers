@@ -7,6 +7,8 @@ public class EnemyShipLogic : MonoBehaviour
     public float chaseRange = 4f;
     public float moveSpeed = 3f;
     public float chaseSpeed = 5f;
+    public float xLimit = 10f;
+    public float yLimit = 10f;
 
     private Vector2 patrolCenter;
     private float patrolAngle;
@@ -44,6 +46,11 @@ public class EnemyShipLogic : MonoBehaviour
         // move towards next patrol position or player if chasing
         Vector2 targetPoint = chasingPlayer ? player.position : nextPatrolPosition;
         float speed = chasingPlayer ? chaseSpeed : moveSpeed;
+
+        // limit the target point to the x and y limits
+        targetPoint.x = Mathf.Clamp(targetPoint.x, -xLimit, xLimit);
+        targetPoint.y = Mathf.Clamp(targetPoint.y, -yLimit, yLimit);
+
         transform.position = Vector2.MoveTowards(transform.position, targetPoint, speed * Time.deltaTime);
 
         // update patrol angle
