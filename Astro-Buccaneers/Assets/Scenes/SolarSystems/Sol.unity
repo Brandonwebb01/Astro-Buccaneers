@@ -223,6 +223,69 @@ MonoBehaviour:
   playerTransform: {fileID: 1662005975372764225}
   cameraOffset: {x: 0, y: 0, z: -10}
   followSpeed: 5
+--- !u!1 &446854271 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2858912857839647850, guid: 138e3d2111f2ba84490ff08c52a12019, type: 3}
+  m_PrefabInstance: {fileID: 3712822348877926976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &446854275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446854271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e129219d5ba8c44fb96e88726a83ea6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patrolRadius: 100
+  player: {fileID: 1662005975372764225}
+  chaseRange: 4
+  moveSpeed: 2
+  chaseSpeed: 3.5
+  xLimit: 10
+  yLimit: 6
+--- !u!114 &446854276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446854271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08da5eee9219b34f9920a5567491f5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: ShipBattleScene
+--- !u!61 &446854280
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446854271}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.21133333}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &696637091 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1453112753038925098, guid: e487be1a399002841a296a10dd7d8f81, type: 3}
@@ -542,6 +605,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1453112753038925098, guid: e487be1a399002841a296a10dd7d8f81, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3101695637959171016, guid: e487be1a399002841a296a10dd7d8f81, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -647,6 +714,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3101695637959171016, guid: e487be1a399002841a296a10dd7d8f81, type: 3}
   m_PrefabInstance: {fileID: 1662005975372764220}
   m_PrefabAsset: {fileID: 0}
+--- !u!61 &1662005975372764227
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662005975372764221}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.21133333}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.28866667}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &3712822348877926976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -702,9 +795,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShip
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1662005975372764225}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 138e3d2111f2ba84490ff08c52a12019, type: 3}
