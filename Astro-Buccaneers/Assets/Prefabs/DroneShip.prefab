@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2187204574538477766}
   - component: {fileID: 5613038200460265867}
   - component: {fileID: -8235054294148484487}
+  - component: {fileID: 4463900202263576209}
   m_Layer: 7
   m_Name: DroneShip
   m_TagString: Untagged
@@ -164,3 +165,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+--- !u!114 &4463900202263576209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2858912857839647850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 522d4236176a7c44890cc40066e63c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5727359151386103931, guid: 56626c1ae8f6775449702d9a5c2d67ff, type: 3}
+  bulletSpeed: 10
+  bulletLifeTime: 2
+  fireRate: 0.2
+  useAI: 0
+  isFiring: 0

@@ -236,6 +236,7 @@ MonoBehaviour:
   bulletSpeed: 10
   bulletLifeTime: 2
   fireRate: 0.2
+  useAI: 0
   isFiring: 0
 --- !u!1 &1150035534
 GameObject:
@@ -423,6 +424,7 @@ MonoBehaviour:
   bulletSpeed: 10
   bulletLifeTime: 2
   fireRate: 0.2
+  useAI: 0
   isFiring: 0
 --- !u!1 &1628109650
 GameObject:
