@@ -10,12 +10,17 @@ public class Shoot : MonoBehaviour
     [SerializeField] float bulletSpeed = 10f;
     [SerializeField] float bulletLifeTime = 2f;
     [SerializeField] float fireRate = 0.2f;
+    [SerializeField] bool useAI;
 
     public bool isFiring;
 
     Coroutine firingCoroutine;
 
-
+    void Start() {
+        if (useAI) {
+            isFiring = true;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
