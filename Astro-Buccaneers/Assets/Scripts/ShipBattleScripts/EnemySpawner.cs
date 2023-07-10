@@ -10,6 +10,8 @@ public class EnemySpawner : MonoBehaviour
     WaveConfig currentWave;
 
     private bool enemyShipExists = true;
+    private List<GameObject> spawnedEnemies = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,16 +32,19 @@ public class EnemySpawner : MonoBehaviour
                 currentWave = wave;
                 for (int i = 0; i < currentWave.GetEnemyCount(); i++)
                 {
-                    if (!enemyShipExists) {
+                    if (!enemyShipExists)
+                    {
                         // Break out of nested loops and exit coroutine
                         isLooping = false;
                         yield break;
                     }
 
-                    Instantiate(currentWave.GetEnemyPrefab(i),
-                    currentWave.GetStartingWayPoint().position,
-                    Quaternion.identity,
-                    transform);
+                    GameObject enemy = Instantiate(currentWave.GetEnemyPrefab(i),
+                        currentWave.GetStartingWayPoint().position,
+                        Quaternion.identity,
+                        transform);
+
+                    spawnedEnemies.Add(enemy);
 
                     yield return new WaitForSeconds(currentWave.GetRandomSpawnTime());
                 }
@@ -50,10 +55,23 @@ public class EnemySpawner : MonoBehaviour
     }
 
     public void OnEnemyShipDestroyed(string enemyShipName)
-{
-    if (enemyShipName == "EnemyShip")
     {
-        enemyShipExists = false;
+        if (enemyShipName == "EnemyShip")
+        {
+            enemyShipExists = false;
+
+            // Clear the spawned enemies
+            ClearSpawnedEnemies();
+        }
     }
-}
+
+    private void ClearSpawnedEnemies()
+    {
+        foreach (GameObject enemy in spawnedEnemies)
+        {
+            Destroy(enemy);
+        }
+
+        spawnedEnemies.Clear();
+    }
 }
