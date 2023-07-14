@@ -1,6 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShipLogic : MonoBehaviour
+public class EnemyShipNavigationLogic : MonoBehaviour
 {
     public float patrolRadius = 200f;
     public Transform player;
