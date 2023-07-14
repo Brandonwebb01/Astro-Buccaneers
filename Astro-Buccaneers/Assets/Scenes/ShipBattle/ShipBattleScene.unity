@@ -123,6 +123,56 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &322185207
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 322185208}
+  - component: {fileID: 322185209}
+  m_Layer: 0
+  m_Name: ShootingPoint (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &322185208
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322185207}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: -0.99, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1.5653331}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 466298174}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!114 &322185209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322185207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 522d4236176a7c44890cc40066e63c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5727359151386103931, guid: 56626c1ae8f6775449702d9a5c2d67ff, type: 3}
+  bulletSpeed: 8
+  bulletLifeTime: 2
+  fireRate: 2
+  useAI: 1
+  isFiring: 0
 --- !u!1 &466298168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2858912857839647850, guid: 138e3d2111f2ba84490ff08c52a12019, type: 3}
@@ -148,6 +198,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!4 &466298174 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1769342901298592392, guid: 138e3d2111f2ba84490ff08c52a12019, type: 3}
+  m_PrefabInstance: {fileID: 1840189486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &863250775 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6522065391505200022, guid: c36685f33fddd2745966bc2677dc590e, type: 3}
@@ -235,6 +290,10 @@ PrefabInstance:
     - target: {fileID: 6522065391505200022, guid: c36685f33fddd2745966bc2677dc590e, type: 3}
       propertyPath: m_Name
       value: space
+      objectReference: {fileID: 0}
+    - target: {fileID: 6522065391505200022, guid: c36685f33fddd2745966bc2677dc590e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c36685f33fddd2745966bc2677dc590e, type: 3}

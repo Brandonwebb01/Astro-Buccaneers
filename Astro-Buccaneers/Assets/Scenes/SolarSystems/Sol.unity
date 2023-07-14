@@ -240,13 +240,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e129219d5ba8c44fb96e88726a83ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolRadius: 100
+  patrolRadius: 8
   player: {fileID: 1662005975372764225}
-  chaseRange: 4
-  moveSpeed: 2
-  chaseSpeed: 3.5
+  chaseRange: 3
+  moveSpeed: 3
+  chaseSpeed: 5
   xLimit: 10
-  yLimit: 6
+  yLimit: 10
 --- !u!114 &446854276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,6 +747,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8274527644498100601, guid: 138e3d2111f2ba84490ff08c52a12019, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1769342901298592392, guid: 138e3d2111f2ba84490ff08c52a12019, type: 3}
       propertyPath: m_RootOrder
       value: 3
