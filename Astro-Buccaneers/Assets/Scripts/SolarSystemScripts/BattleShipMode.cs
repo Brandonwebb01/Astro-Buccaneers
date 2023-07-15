@@ -1,14 +1,17 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BattleShipMode : MonoBehaviour
+namespace SolarSystemScripts
 {
-    public string sceneName;
-    void OnCollisionEnter2D(Collision2D collision)
+    public class BattleShipMode : MonoBehaviour
     {
-        if (collision.gameObject.tag == "Player")
+        public string sceneName;
+        void OnCollisionEnter2D(Collision2D collision)
         {
-            SceneManager.LoadScene(sceneName);
+            if (collision.gameObject.tag == "Player")
+            {
+                SceneManager.LoadScene(sceneName);
+            }
         }
     }
 }

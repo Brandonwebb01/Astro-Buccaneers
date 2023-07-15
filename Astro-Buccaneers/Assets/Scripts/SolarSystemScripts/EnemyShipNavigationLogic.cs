@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShipNavigationLogic : MonoBehaviour
+namespace SolarSystemScripts 
+{
+    public class EnemyShipNavigationLogic : MonoBehaviour
 {
     public float patrolRadius = 200f;
     public Transform player;
@@ -64,4 +66,5 @@ public class EnemyShipNavigationLogic : MonoBehaviour
             patrolAngle -= 360f;
         }
     }
+}
 }

@@ -3,57 +3,60 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Pathfinder : MonoBehaviour
+namespace ShipBattleScripts
 {
-    EnemySpawner enemySpawner;
-    WaveConfig waveConfig;
-    List<Transform> waypoints;
-    int waypointIndex = 0;
-
-    void Awake()
+    public class Pathfinder : MonoBehaviour
     {
-        enemySpawner = FindObjectOfType<EnemySpawner>();
+        EnemySpawner enemySpawner;
+        WaveConfig waveConfig;
+        List<Transform> waypoints;
+        int waypointIndex = 0;
 
-        // Check if the current scene is "ShipBattleScene"
-        Scene currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == "ShipBattleScene")
+        void Awake()
         {
-            // Initialize the necessary variables
-            waveConfig = enemySpawner.GetCurrentWave();
-            waypoints = waveConfig.GetWaypoints();
-            transform.position = waypoints[waypointIndex].transform.position;
-        }
-        else
-        {
-            // If the scene is not "ShipBattleScene", disable the script
-            enabled = false;
-        }
-    }
+            enemySpawner = FindObjectOfType<EnemySpawner>();
 
-    void Update()
-    {
-        // Only follow the path if the script is enabled
-        if (enabled)
-        {
-            FollowPath();
-        }
-    }
-
-    void FollowPath()
-    {
-        if (waypointIndex < waypoints.Count)
-        {
-            Vector3 targetPosition = waypoints[waypointIndex].position;
-            float movementThisFrame = waveConfig.GetMoveSpeed() * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, movementThisFrame);
-            if (transform.position == targetPosition)
+            // Check if the current scene is "ShipBattleScene"
+            Scene currentScene = SceneManager.GetActiveScene();
+            if (currentScene.name == "ShipBattleScene")
             {
-                waypointIndex++;
+                // Initialize the necessary variables
+                waveConfig = enemySpawner.GetCurrentWave();
+                waypoints = waveConfig.GetWaypoints();
+                transform.position = waypoints[waypointIndex].transform.position;
+            }
+            else
+            {
+                // If the scene is not "ShipBattleScene", disable the script
+                enabled = false;
             }
         }
-        else
+
+        void Update()
         {
-            Destroy(gameObject);
+            // Only follow the path if the script is enabled
+            if (enabled)
+            {
+                FollowPath();
+            }
+        }
+
+        void FollowPath()
+        {
+            if (waypointIndex < waypoints.Count)
+            {
+                Vector3 targetPosition = waypoints[waypointIndex].position;
+                float movementThisFrame = waveConfig.GetMoveSpeed() * Time.deltaTime;
+                transform.position = Vector3.MoveTowards(transform.position, targetPosition, movementThisFrame);
+                if (transform.position == targetPosition)
+                {
+                    waypointIndex++;
+                }
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

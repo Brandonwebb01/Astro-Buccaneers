@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+namespace MainMenuScripts
 {
-    public void PlayGame() {
-        SceneManager.LoadScene("Navigation");
-    }
+    public class MainMenu : MonoBehaviour
+    {
+        public void PlayGame() {
+            SceneManager.LoadScene("Navigation");
+        }
 
-    public void QuitGame() {
-        Application.Quit();
+        public void QuitGame() {
+            Application.Quit();
+        }
     }
 }

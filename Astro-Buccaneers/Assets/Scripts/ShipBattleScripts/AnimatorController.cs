@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class AnimatorController : MonoBehaviour
+namespace ShipBattleScripts 
 {
-    public Animator Explosion1_Large_0;
-
-    private void Start()
+    public class AnimatorController : MonoBehaviour
     {
-        Explosion1_Large_0 = GetComponent<Animator>();
-    }
+        public Animator Explosion1_Large_0;
 
-    public void StopAnimation()
-    {
-        Explosion1_Large_0.enabled = false;
+        private void Start()
+        {
+            Explosion1_Large_0 = GetComponent<Animator>();
+        }
+
+        public void StopAnimation()
+        {
+            Explosion1_Large_0.enabled = false;
+        }
     }
 }
